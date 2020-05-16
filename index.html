@@ -2,24 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Магазин гаджетов"DEVICE"</title>
+    <title>Главная|Магазин гаджетов"DEVICE"</title>
   </head>
   <body>
     <header>
-      <a>
-        <img src="logo.svg" alt="Логотип магазина «DEVICE»">
-      </a>
-      <!--Будет форма для поиска-->
-      <label>
-        Поиск<input type="search" id="search-field" name="search" value="Поиск по сайту">
-      </label>
-      <p>Войти</p><!--Форма-->
-      <a href="#">Сравнить</a>
-      <a href="#">Корзина</a>
       <nav>
+        <a>
+          <img src="logo.svg" alt="Логотип магазина «DEVICE»">
+        </a>
+        <!--Будет форма для поиска-->
+        <label>
+          Поиск<input type="search" id="search-field" name="search" value="Поиск по сайту">
+        </label>
+        <!--Форма-->
+        <ul>
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
         <ul>
           <li>
             <a href="catalog.html">Каталог товаров</a>
+            <select name="catalog-list">
+              <option value="virtual-reality">Виртуальная реальность</option>
+              <option value="selfie-monopod">Моноподы для селфи</option>
+              <option value="action-camera">Экшн-камеры</option>
+              <option value="fitness-bracelet">Фитнес-браслеты</option>
+              <option value="smart-watch">Моноподы для селфи</option>
+              <option value="quadcopter">Моноподы для селфи</option>
+            </select>
           </li>
           <li>
             <a href="#">Доставка</a>
@@ -38,11 +49,11 @@
       <section>
         <h2>О нас</h2>
         <p>
-          Огромный выбор гаджетов не оставит равнодушным гика,<br>
+          Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.
         </p>
         <p>
-          Мы можем доставить ваш товар в самые отдаленные точки<br>
+          Мы можем доставить ваш товар в самые отдаленные точки
           России! DEVICE работает со многими транспортными компаниями:
         </p>
         <ul>
@@ -67,6 +78,7 @@
         <img src="logo.svg" alt="Логотип магазина «DEVICE»">
       </a>
       <section>
+        <h2>Навигация пользователя</h2>
         <ul>
           <li>
             <a href="#">Войти</a>
@@ -80,6 +92,8 @@
         </ul>
       </section>
       <address>г. Москва, ул. Строителей, 15</address>
+      <section>
+        <h2>Навигация по сайту</h2>
         <ul>
           <li>
             <a href="#">Доставка</a>
@@ -91,7 +105,8 @@
             <a href="#">Контакты</a>
           </li>
         </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
+      </section>
+      <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <section>
         <h2>Социальные сети</h2>
         <ul>
