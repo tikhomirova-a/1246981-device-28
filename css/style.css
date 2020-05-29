@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300; /* light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800; /* extra-bold */
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-grey: #464646;
+  --basic-grey-light: #7e7e7e;
+  --basic-half-grey: #e5e5e5;
+  --basic-white: #ffffff;
+  --special-yellow-dark: #f0c52e;
+  --special-yellow: #f7e296;
+  --special-yellow-light: #f7e296;
+  --special-green: #91c02f;
+  --status: #f6dada;
+}
+
+/* Global */
+
+body {
+  min-width: 1180px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--basic-black) */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Currently hidden on this step */
+
+.currently-hidden {
+  display: none;
+}
+
+/* Header navigation */
+
+.header-navigation li {
+  list-style: none;
+}
+
+.header-navigation a {
+  color: var(--basic-black);
+}
+
+.header-navigation {
+  background-color: var(--special-yellow);
+}
+
+a.header-logo:hover,
+a.header-logo:focus {
+  opacity: 0.6;
+}
+
+a.header-logo:active {
+  opacity: 0.3;
+}
+
+.header-user-nav,
+.search-form {
+  line-height: 20px;
+}
+
+.search-form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input:hover::placeholder,
+.search-form input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:active {
+  color: var(--basic-black);
+}
+
+.header-user-nav a:hover,
+.header-user-nav a:focus {
+  opacity: 0.6;
+}
+
+.header-user-nav a:active {
+  opacity: 0.3;
+  border: none;
+}
+
+.header-service-nav > li {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.header-service-nav .catalog li {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.header-service-nav a:hover,
+.header-service-nav a:focus {
+  opacity: 0.6;
+}
+
+.header-service-nav a:active {
+  opacity: 0.3;
+}
+
+
+/* Info and contacts */
+
+.info-contacts h2 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.info-contacts ul {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+  list-style: none;
+}
+
+.info-contacts a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.info-contacts a:active {
+  opacity: 0.3;
+}
+
+/* Footer */
+
+.footer-logo svg {
+  fill: var(--special-yellow-dark);
+}
+
+a.footer-logo:hover svg,
+a.logo-footer:focus svg {
+  opacity: 0.6;
+}
+
+a.footer-logo:active svg {
+  opacity: 0.3;
+}
+
+.footer-navigation {
+  background-color: var(--basic-dark);
+  color: var(--basic-white);
+  line-height: 20px;
+}
+
+.footer-navigation li {
+  list-style: none;
+}
+
+.footer-navigation a {
+  color: var(--basic-white);
+}
+
+.footer-user-nav a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-nav a:hover,
+.footer-user-nav a:focus {
+  color: var(--basic-white);
+}
+
+.footer-user-nav a:active {
+  opacity: 0.3;
+}
+
+.footer-service-nav {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-service-nav a:hover,
+.footer-service-nav a:focus {
+  opacity: 0.6;
+}
+
+.footer-service-nav a:active {
+  opacity: 0.3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
