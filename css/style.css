@@ -159,7 +159,7 @@ a.header-logo:active {
   list-style: none;
 }
 
-.info-contacts a {
+.button {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 800;
@@ -167,11 +167,15 @@ a.header-logo:active {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-color: var(--special-yellow-dark);
+}
+
+.info-contacts a {
   color: var(--basic-black);
 }
 
 .info-contacts a:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -244,4 +248,112 @@ a.footer-logo:active svg {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+
+/* Catalog page */
+
+.log-out a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-page h1 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+/* Filters */
+
+.filter legend {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.filter input[disabled] + label {
+  color: #A6A6A6;
+}
+
+/* Тут будет меняться размер желтого прямоугольника на фоне
+.filter .button:hover,
+.filter .button:focus,
+.catalog .button:hover,
+.catalog .button:focus {}
+*/
+
+.filter .button:active,
+.catalog .button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Catalog */
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item h3 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.catalog-item .catalog-item-price {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+.compare-button {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.compare-button:hover,
+.compare-button:focus {
+  opacity: 1;
+}
+
+.compare-button:active {
+  opacity: 0.2;
 }

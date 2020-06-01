@@ -23,7 +23,7 @@
         </div>
         <ul class="header-user-nav">
           <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
+          <li class="log-out"><a href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
         </ul>
@@ -51,18 +51,18 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="catalog-page">
       <h1>Моноподы для селфи</h1>
       <nav>
-        <ul>
+        <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог товаров</a></li>
-          <li><a>Моноподы для селфи</a></li>
+          <li><a href="#">Моноподы для селфи</a></li>
         </ul>
       </nav>
-      <section>
+      <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цвет</legend>
             <ul>
@@ -101,46 +101,46 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="catalog">
         <h2 class="visually-hidden">Товары</h2>
         <ul>
           <li>
-            <article>
+            <article class="catalog-item">
               <a href="#"><img src="img/amateur.jpg" width="360" height="380" alt="Селфи-палка со смартфоном."></a>
               <h3>Любительская селфи-палка</h3>
-              <p>500 руб.</p>
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <p class="catalog-item-price">500 руб.</p>
+              <button class="button" type="button">В корзину</button>
+              <button class="compare-button" type="button">Добавить к сравнению</button>
             </article>
           </li>
           <li>
-            <article>
+            <article class="catalog-item">
               <a href="#"><img src="img/professional.jpg" width="360" height="380" alt="Черная селфи-палка с толстой ручкой."></a>
               <h3>Профессиональная селфи-палка</h3>
-              <p>1500 руб.</p>
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <p class="catalog-item-price">1500 руб.</p>
+              <button class="button" type="button">В корзину</button>
+              <button class="compare-button" type="button">Добавить к сравнению</button>
             </article>
           </li>
           <li>
-            <article>
+            <article class="catalog-item">
               <a href="#"><img src="img/waterproof.jpg" width="360" height="380" alt="Селфи-палка со шнурком на широкой ручке и подводной камерой."></a>
               <h3>Непотопляемая селфи-палка</h3>
-              <p>2500 руб.</p>
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <p class="catalog-item-price">2500 руб.</p>
+              <button class="button" type="button">В корзину</button>
+              <button class="compare-button" type="button">Добавить к сравнению</button>
             </article>
           </li>
           <li>
-            <article>
+            <article class="catalog-item">
               <a><img src="img/follow-me.jpg" width="360" height="380" alt="Селфи-палка с ручкой в виде руки человека."></a>
               <h3>Селфи-палка «Следуй за мной»</h3>
-              <p>4900 руб.</p>
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <p class="catalog-item-price">4900 руб.</p>
+              <button class="button" type="button">В корзину</button>
+              <button class="compare-button" type="button">Добавить к сравнению</button>
             </article>
           </li>
         </ul>
