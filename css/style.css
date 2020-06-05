@@ -28,8 +28,8 @@
   --basic-black: #000000;
   --basic-dark: #363636;
   --basic-grey: #464646;
-  --basic-grey-light: #7e7e7e;
-  --basic-half-grey: #e5e5e5;
+  --basic-half-grey: #7e7e7e;
+  --basic-grey-light: #e5e5e5;
   --basic-white: #ffffff;
   --special-yellow-dark: #f0c52e;
   --special-yellow: #f7e296;
@@ -80,65 +80,89 @@ img {
   align-content: start;
 }
 
-/* Header */
-
-.page-header {
-  margin-bottom: 76px;
-  margin-top: 40px;
+.header-nav-wrapper {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  row-gap: 50px;
 }
 
 /* Container */
 
 .container {
-  width: 1040px;
+  width: 1160px;
   margin: 0 auto;
 }
+
+.page-header .container {
+  background-color: var(--special-yellow);
+}
+
+.page-header {
+  padding-top: 40px;
+}
+
 
 /* Header-navigation  */
 
 .header-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
-.header-nav-wrapper {
-  width: 100%;
-  margin-bottom: 164px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.header-navigation .header-nav-wrapper {
+  padding-top: 45px;     /*  Отступ, как в макете, но факту получается больше */
 }
 
-.header-nav-wrapper ul {
+.header-navigation .header-nav-wrapper ul {
+  padding: 0;
   margin: 0;
 }
 
 .header-logo {
+  display: block;
   width: 163px;
   height: 35px;
-  margin-top: -20px;
 }
+
+/* Header-user-nav */
 
 .header-user-nav {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
-  padding-left: 20px;
+  align-items: baseline;
 }
+
+.user-nav-search {
+  margin-right: auto;
+}
+
+.header-user-nav .user-nav-log-in {
+  margin-right: 240px;
+}
+
+.header-user-nav .user-nav-compare {
+  margin-right: 65px;
+}
+
+/* Header-service-nav */
 
 .header-service-nav {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0;
+  margin-top: 50px;
+}
+
+.service-nav-catalog {
+  margin-right: auto;
+}
+
+.service-nav-delivery {
+  margin-right: 40px;
+}
+
+.service-nav-garantee {
+  margin-right: 110px;
 }
 
 /* Header*/
-
-.page-header {
-  background-color: var(--special-yellow);
-}
 
 .header-navigation li {
   list-style: none;
@@ -185,7 +209,7 @@ a.header-logo:active {
   border: none;
 }
 
-.header-service-nav .service-nav-item {
+.header-service-nav li {
   font-family: "Gilroy", Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -195,7 +219,7 @@ a.header-logo:active {
   letter-spacing: 0.2em;
 }
 
-.service-nav-item:first-child {
+.header-service-nav li:first-child {
   letter-spacing: 0.1em;
 }
 
@@ -218,6 +242,60 @@ a.header-logo:active {
   opacity: 0.3;
 }
 
+
+/* Info and contacts layout */
+
+/* Info */
+
+.info-contacts {
+  display: grid;
+  grid-template-columns: 475px 560px;
+  column-gap: 125px;
+  margin-bottom: 85px;
+}
+
+.info {
+  padding-top: 50px;
+}
+
+.info h2 {
+  margin-bottom: 50px;
+}
+
+.info p:first-of-type {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.info ul {
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 84px;
+}
+
+.info li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Contacts */
+
+.contacts {
+  padding-top: 53px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-top: 47px;
+  margin-bottom: 40px;
+}
+
+.info-contacts a.button {
+  display: inline-block;
+}
+
+.contacts a.button {
+  margin-top: 85px;
+}
 
 /* Info and contacts */
 
@@ -261,6 +339,80 @@ a.header-logo:active {
 
 .info-contacts a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+/* Footer layout*/
+
+.page-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
+  padding-top: 45px;
+  padding-bottom: 65px;
+}
+
+.section-user-nav {
+  grid-column: 1/4;
+  margin-left: auto;
+  grid-row: 1/2;
+}
+
+.footer-logo {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  margin-top: 20px;
+}
+
+.page-footer-address {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 40px;
+}
+
+.section-service-nav {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 40px;
+  margin-bottom: 65px;
+}
+
+.page-footer-tel {
+  grid-column: 3/4;
+  justify-self: end;
+  margin-top: 40px;
+  margin-bottom: 65px;
+}
+
+.section-socials {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.footer-logo-academy {
+  grid-column: 3/4;
+  justify-self: end;
+}
+
+.footer-user-nav {
+  display: flex;
+}
+
+.footer-service-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social-buttons {
+  display: flex;
+}
+
+.footer-user-nav li:not(:last-child) {
+  margin-right: 65px;
+}
+
+.footer-service-nav li:not(:last-child) {
+  margin-right: 35px;
 }
 
 /* Footer */
@@ -324,7 +476,7 @@ a.footer-logo:active svg {
   opacity: 0.3;
 }
 
-.page-footer-adress {
+.page-footer-address {
   font-style: normal;
 }
 
@@ -342,8 +494,38 @@ a.footer-logo:active svg {
 
 /* Catalog page */
 
-.log-out a {
+/* Header */
+
+.inner-page .user-nav-profile {
+  margin-right: 20px;
+}
+
+.inner-page .user-nav-log-out {
+  margin-right: 5px;
+  width: 130px;
+}
+
+.inner-page .user-nav-compare {
+  margin-right: 65px;
+}
+
+.user-nav-log-out a {
   color: rgba(0, 0, 0, 0.3);
+}
+
+/* Main */
+
+.page-main-content {
+  padding-left: 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  padding: 0
+}
+
+.breadcrumbs li:not(:last-child) {
+  margin-right: 40px;
 }
 
 .catalog-page h1 {
@@ -372,6 +554,44 @@ a.footer-logo:active svg {
 
 .breadcrumbs a[href]:active {
   opacity: 0.1;
+}
+
+/* Filters and catalog layout*/
+
+.filters-catalog-wrapper .page-main-content {
+  display: grid;
+  grid-template-columns: 270px 830px;
+}
+
+.filters {
+  background-color: var(--basic-grey-light);
+  padding-right: 70px;
+  padding-top: 70px;
+}
+
+.catalog {
+  background-color: var(--basic-white);
+  padding-top: 70px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+}
+
+.catalog-item-caption {
+  display: flex;
+  width: 360px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.catalog-item-price {
+  min-width: 80px;
 }
 
 /* Filters */
@@ -450,4 +670,10 @@ a.footer-logo:active svg {
 .compare-button:active {
   opacity: 0.2;
   cursor: pointer;
+}
+
+/* Footer */
+
+.footer-user-nav li:first-child {
+  margin-right: 24px;
 }
