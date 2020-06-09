@@ -22,13 +22,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Variables */
 
 :root {
   --basic-black: #000000;
   --basic-dark: #363636;
   --basic-grey: #464646;
-  --basic-half-grey: #7e7e7e;
+  --basic-medium-grey: #7e7e7e;
   --basic-grey-light: #e5e5e5;
   --basic-white: #ffffff;
   --special-yellow-dark: #f0c52e;
@@ -63,7 +71,7 @@ img {
 
 /* Currently hidden on this step */
 
-.hide {
+.modal-map {
   display: none;
 }
 
@@ -330,6 +338,71 @@ a.header-logo:active {
   opacity: 0.3;
 }
 
+/* Header catalog dropdown */
+
+.service-nav-catalog {
+  position: relative;
+}
+
+ul.service-nav-dropdown {
+  width: 1160px;
+  box-sizing: border-box;
+  position: absolute;
+  left: -60px;
+  padding-left: 60px;
+  padding-top: 31px;
+  padding-bottom: 46px;
+  background-color: var(--special-yellow);
+  display: grid;
+  grid-template-columns: 179px 125px min-content;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 16px;
+  grid-column-gap: 61px;
+  grid-template-areas:
+    "vr fitness quad"
+    "monopods watch ."
+    "action . .";
+}
+
+.service-nav-dropdown li:first-child {
+  grid-area: vr;
+}
+
+.service-nav-dropdown li:nth-child(2) {
+  grid-area: monopods;
+}
+
+.service-nav-dropdown li:nth-child(3) {
+  grid-area: action;
+}
+
+.service-nav-dropdown li:nth-child(4) {
+  grid-area: fitness;
+}
+
+.service-nav-dropdown li:nth-child(5) {
+  grid-area: watch;
+}
+
+.service-nav-dropdown li:nth-child(6) {
+  grid-area: quad;
+}
+
+.catalog-dropdown-icon {
+  position: relative;
+}
+
+.catalog-dropdown-icon::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 3px;
+  right: -35px;
+  background-image: url(../img/icons/plus.svg);
+  background-position: center;
+}
+
 /* Info and contacts layout */
 
 /* Info */
@@ -367,7 +440,7 @@ a.header-logo:active {
 /* Contacts */
 
 .contacts {
-  padding-top: 53px;
+  padding-top: 50px;
 }
 
 .contacts p {
@@ -412,12 +485,50 @@ a.header-logo:active {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  height: 40px;
+}
+
+.button::before {
+  content: "";
+  width: 100%;
+  height: 8px;
   background-color: var(--special-yellow-dark);
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+span.button-text {
+  position: relative;
+  z-index: 1;
 }
 
 .button:hover,
 .button:active {
+  background-color: var(--special-yellow-dark);
   cursor: pointer;
+}
+
+.button:focus,
+.button:active {
+  outline: none;
+  background-color: var(--special-yellow-dark);
+}
+
+.info-contacts .button {
+  width: 260px;
+}
+
+.info-contacts .button::before {
+  top: 8px;
 }
 
 .info-contacts a {
@@ -490,6 +601,9 @@ a.header-logo:active {
   margin-right: 43px;
 }
 
+.footer-user-nav li span {
+  margin-left: 11px;
+}
 
 .footer-service-nav {
   display: flex;
@@ -509,11 +623,16 @@ a.header-logo:active {
 
 .social-buttons {
   display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-.footer-user-nav li span {
-  margin-left: 11px;
+.social-buttons li:not(:last-child) {
+  margin-right: 20px;
 }
+
 
 /* Footer */
 
@@ -561,16 +680,26 @@ a.footer-logo:active svg {
   color: var(--basic-white);
 }
 
-.footer-user-nav a:hover svg path {
-  fill: rgba(255, 198, 0, 0.6);
+.footer-nav-link:hover path,
+.footer-nav-link:focus path {
+  opacity: 0.6;
 }
 
 .footer-user-nav a:active {
   opacity: 0.3;
 }
 
-.footer-user-nav a:active svg path {
-  fill: rgba(255, 198, 0, 0.3);
+.footer-nav-link:active path {
+  opacity: 0.3;
+}
+
+.footer-user-nav-profile:hover path,
+.footer-user-nav-profile:focus path {
+  opacity: 0.6;
+}
+
+.footer-user-nav-profile:active path {
+  opacity: 0.3;
 }
 
 .footer-service-nav {
@@ -607,6 +736,118 @@ a.footer-logo:active svg {
   overflow: hidden;
 }
 
+/* Modal windows */
+
+/* Contact form  */
+
+.modal-contact-form input[placeholder] {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contact-form label {
+  font-family: "Gilroy", Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.modal-contact-form {
+  width: 960px;
+  height: 550px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  background-color: var(--basic-white);
+  z-index: 2;
+}
+
+.contact-form {
+  display: flex;
+  width: 760px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 73px;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+
+.contact-form * {
+  box-sizing: border-box;
+}
+
+.contact-form-name {
+  width: 360px;
+}
+
+.contact-form-email {
+  width: 360px;
+}
+
+.contact-form-text {
+  width: 100%;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 0;
+}
+
+.contact-form input {
+  height: 50px;
+  padding-left: 20px;
+  background-color: #f2f2f2;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  background-color: #eaeaea;
+}
+
+.contact-form input:focus,
+.contact-form input:active,
+.contact-form textarea:focus,
+.contact-form textarea:active {
+  outline: 2px solid var(--special-yellow);
+  background-color: transparent;
+}
+
+.contact-form textarea {
+  background-color: #f2f2f2;
+  padding-top: 16px;
+  height: 167px;
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+.contact-form .button {
+  width: 200px;
+}
+
+/* Map */
+
 
 /* Catalog page */
 
@@ -637,7 +878,10 @@ a.footer-logo:active svg {
 
 .breadcrumbs {
   display: flex;
-  padding: 0
+  margin:0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 47px;
 }
 
 .breadcrumbs li:not(:last-child) {
@@ -650,11 +894,12 @@ a.footer-logo:active svg {
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  margin-top: 51px;
 }
 
-.breadcrumbs {
-  list-style: none;
-}
 
 .breadcrumbs a {
   font-size: 14px;
@@ -676,7 +921,8 @@ a.footer-logo:active svg {
 
 .filters-catalog-wrapper .page-main-content {
   display: grid;
-  grid-template-columns: 270px 830px;
+  grid-template-columns: 270px 1fr; /*830px*/
+  align-content: start;
 }
 
 .filters {
@@ -685,18 +931,27 @@ a.footer-logo:active svg {
   padding-top: 70px;
 }
 
+.filters .button {
+  width: 200px;
+}
+
 .catalog {
   background-color: var(--basic-white);
   padding-top: 70px;
+  padding-left: 70px;
 }
 
 .catalog-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
+  row-gap: 48px;
   padding: 0;
   margin: 0;
-  margin-left: 70px;
+}
+
+.catalog-item {
+  min-width: 360px;
 }
 
 .catalog-item-caption {
@@ -710,6 +965,34 @@ a.footer-logo:active svg {
   min-width: 80px;
 }
 
+
+.filters-catalog-wrapper {
+  position: relative;
+}
+
+.filters-catalog-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 1160px);
+  background-color: var(--basic-grey-light);
+  left: 0;
+  z-index: -1;
+}
+
+.filters-catalog-wrapper .page-main-content {
+  position: relative;
+}
+
+.filters-catalog-wrapper .page-main-content::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  background-color: var(--basic-grey-light);
+  left: 0;
+  z-index: -1;
+}
 /* Filters */
 
 .filters-group legend {
@@ -730,13 +1013,6 @@ a.footer-logo:active svg {
 .filters-group input[disabled] + label {
   color: #A6A6A6;
 }
-
-/* Тут будет меняться размер желтого прямоугольника на фоне
-.filter .button:hover,
-.filter .button:focus,
-.catalog .button:hover,
-.catalog .button:focus {}
-*/
 
 .filters .button:active,
 .catalog .button:active {
@@ -767,23 +1043,47 @@ a.footer-logo:active svg {
   letter-spacing: 0.05em;
 }
 
-.compare-button {
+.catalog-item div:first-of-type {
+  position: relative;
+}
+
+.catalog-cart-button {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.catalog-compare-button {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.1em;
   opacity: 0.5;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 224px;
+  right: 0;
+  margin: auto;
 }
 
-.compare-button:hover,
-.compare-button:focus {
+.catalog-compare-button:hover,
+.catalog-compare-button:focus {
   opacity: 1;
+  outline: none;
 }
 
-.compare-button:hover {
+.catalog-compare-button:hover {
   cursor: pointer;
 }
 
-.compare-button:active {
+.catalog-compare-button:active {
   opacity: 0.2;
   cursor: pointer;
+  outline: none;
 }
