@@ -71,7 +71,8 @@ img {
 
 /* Currently hidden on this step */
 
-.modal-map {
+.modal-map,
+.modal-contact-form {
   display: none;
 }
 
