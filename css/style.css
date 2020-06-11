@@ -71,8 +71,7 @@ img {
 
 /* Currently hidden on this step */
 
-.modal-map,
-.modal-contact-form {
+.modal {
   display: none;
 }
 
@@ -739,6 +738,18 @@ a.footer-logo:active svg {
 
 /* Modal windows */
 
+.modal {
+  box-sizing: border-box;
+  position: fixed;
+  background-color: var(--basic-white);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
 /* Contact form  */
 
 .modal-contact-form input[placeholder] {
@@ -761,18 +772,9 @@ a.footer-logo:active svg {
 .modal-contact-form {
   width: 960px;
   height: 550px;
-  box-sizing: border-box;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  right: 0;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
-  background-color: var(--basic-white);
-  z-index: 2;
 }
 
 .contact-form {
@@ -847,8 +849,72 @@ a.footer-logo:active svg {
   width: 200px;
 }
 
+.modal-close {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-color: var(--special-yellow-dark);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 27px;
+  right: 14px;
+  width: 25px;
+  height: 3px;
+  background-color: var(--basic-white);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.modal-close:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.modal-close:hover::before,
+.modal-close:focus::before,
+.modal-close:active::before {
+  transform: rotate(90deg);
+}
+
+.modal-close:hover::after,
+.modal-close:focus::after,
+.modal-close:active::after {
+  transform: none;
+}
+
 /* Map */
 
+.modal-map {
+  width: 994px;
+  height: 593px;
+  margin-top: 30px;
+}
+
+.modal-map iframe {
+  border: none;
+}
 
 /* Catalog page */
 
