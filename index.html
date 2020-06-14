@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Главная|Магазин гаджетов"DEVICE"</title>
@@ -13,12 +13,12 @@
           <a class="header-logo" href="#" aria-label="Вы на главной странице магазина «DEVICE».">
             <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE».">
           </a>
-          <ul class="header-user-nav">
+          <ul class="header-user-nav reset-list">
             <li class="user-nav-search">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label for="search-field"><span class="visually-hidden">Поиск</span></label>
                 <input id="search-field" type="search" name="search" placeholder="Поиск по сайту">
-                <button type="submit">Найти</button>
+                <button class="visually-hidden" type="submit">Найти</button>
               </form>
             </li>
             <li class="user-nav-log-in">
@@ -31,10 +31,10 @@
               <a href="#">Корзина</a>
             </li>
           </ul>
-          <ul class="header-service-nav">
+          <ul class="header-service-nav reset-list">
             <li class="service-nav-catalog">
               <a class="catalog-dropdown-icon" href="catalog.html">Каталог товаров</a>
-              <ul class="service-nav-dropdown">
+              <ul class="service-nav-dropdown reset-list">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн-камеры</a></li>
@@ -62,29 +62,29 @@
         <div class="info-contacts">
           <section class="info">
             <h2>О нас</h2>
-            <p>
+            <p class="reset-text">
               Огромный выбор гаджетов не оставит равнодушным гика,
               который есть в каждом из нас.
             </p>
-            <p>
+            <p class="reset-text">
               Мы можем доставить ваш товар в самые отдаленные точки
               России! DEVICE работает со многими транспортными компаниями:
             </p>
-            <ul>
+            <ul class="reset-list">
               <li>Деловые линии</li>
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button" href="#"><span class="button-text">Подробнее о нас</span></a>
+            <a class="button" href="#">Подробнее о нас</a>
           </section>
           <section class="contacts">
             <h2>Контакты</h2>
-            <p>
+            <p class="reset-text">
               Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
               проверить работоспособность покупки. Всякое бывает.
             </p>
             <a href="#" aria-label="Показать наш офис на карте."><img src="img/map.png" width="560" height="222" alt="Наш офис по адресу улица Строителей, 15 на карте."></a>
-            <a class="button" href="#"><span class="button-text">Напишите нам</span></a>
+            <a class="button" href="#">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -99,7 +99,7 @@
         </a>
         <section class="section-user-nav">
           <h2 class="visually-hidden">Навигация пользователя</h2>
-          <ul class="footer-user-nav">
+          <ul class="footer-user-nav reset-list">
             <li class="footer-user-nav-login">
               <a class="footer-nav-link" href="#">
                 <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +127,7 @@
         <address class="page-footer-address">г. Москва, ул. Строителей, 15</address>
         <section class="section-service-nav">
           <h2 class="visually-hidden">Навигация по условиям пользования сервисом</h2>
-          <ul class="footer-service-nav">
+          <ul class="footer-service-nav reset-list">
             <li class="footer-service-nav-delivery">
               <a href="#">Доставка</a>
             </li>
@@ -142,7 +142,7 @@
         <a class="page-footer-tel" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         <section class="section-socials">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="social-buttons">
+          <ul class="social-buttons reset-list">
             <li>
               <a class="social-buttons-facebook" href="#" aria-label="Перейти в группу магазина «DEVICE» Фейсбук.">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,36 +166,39 @@
             </li>
           </ul>
         </section>
-        <p class="footer-logo-academy">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy. Онлайн‑курс
-          HTML и CSS. Профессиональная вёрстка сайтов."></a>
+        <p class="footer-logo-academy reset-text">
+          <a class="footer-logo-academy-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy. Онлайн‑курс
+          HTML и CSS. Профессиональная вёрстка сайтов.">
+            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.62 0.0169551L13.472 0L0 1.40827V26.0042L13.473 34L26.903 26.0311L26.945 26.0062V1.40827L13.62 0.0169551ZM25.019 12.095L13.495 5.31992L13.494 5.21619L13.407 5.26606L13.319 5.21021V5.31892L1.925 12.086V3.13869L13.473 1.92989L25.02 3.13869V12.095H25.019ZM13.405 6.76908L24.923 13.4644L20.444 16.0974L13.351 11.8875L13.337 13.2988L19.241 16.8025L18.381 17.3082L13.351 14.3241L13.337 15.7353L17.164 18.0043L16.382 18.526L13.351 16.7437L13.337 18.1529L15.19 19.2411L13.39 20.3192L2.034 13.586L13.405 6.76908ZM1.925 15.0871L13.336 21.8601L13.352 22.9014L5.41 18.1859L5.395 19.5981L13.374 24.3805L13.392 25.4536L5.419 20.7261L5.406 22.1364L13.427 26.9457L13.473 26.9706L21.616 22.1115L21.605 16.9481L25.02 14.9175V24.9121L13.472 31.7659L1.925 24.9131V15.0871Z" fill="#F0C52E"/>
+            </svg>
+          </a>
         </p>
       </div>
     </footer>
-    <section class="modal modal-contact-form">
+    <section class="modal modal-contact-form hide">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="contact-form-name">
+        <p class="contact-form-name reset-text">
           <label for="contact-name">Ваше имя:</label>
           <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="contact-form-email">
+        <p class="contact-form-email reset-text">
           <label for="contact-email">Ваш e-mail:</label>
           <input id="contact-email" type="email" name="email" placeholder="email@example.com" required>
         </p>
-        <p class="contact-form-text">
+        <p class="contact-form-text reset-text">
           <label for="contact-text">Текст письма:</label>
           <textarea id="contact-text" name="text" placeholder="В свободной форме" required></textarea>
         </p>
-        <button class="button" type="submit"><span class="button-text">Отправить</span></button>
+        <button class="button" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть окно с формой."></button>
     </section>
-    <section class="modal modal-map">
+    <section class="modal modal-map hide">
       <h2 class="visually-hidden">Найти нас на карте</h2>
       <iframe src="https://maps.google.com/maps?width=100%&amp;height=593&amp;hl=en&amp;q=%D0%A3%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2015%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+(%D0%9D%D0%B0%D1%88%20%D0%BE%D1%84%D0%B8%D1%81%20%D0%BF%D0%BE%20%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D1%83%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2C%2015%20%D0%BD%D0%B0%20%D0%BA%D0%B0%D1%80%D1%82%D0%B5.)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
         width="994" height="593" allowfullscreen title="Наш офис по адресу улица Строителей, 15 на карте."></iframe>
-      <!-- <img src="img/map-big.png" width="994" height="593" alt="Наш офис по адресу улица Строителей, 15 на карте."> -->
       <button class="modal-close" type="button" aria-label="Закрыть карту."></button>
     </section>
   </body>
