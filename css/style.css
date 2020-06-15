@@ -319,7 +319,6 @@ a.header-logo:active {
   cursor: pointer;
 }
 
-
 .search-form:focus-within::before {
   content: "";
   width: 100%;
@@ -409,6 +408,8 @@ a.header-logo:active {
 }
 
 ul.service-nav-dropdown {
+  /* display: none; */
+  display: grid;
   width: 1160px;
   box-sizing: border-box;
   position: absolute;
@@ -417,7 +418,6 @@ ul.service-nav-dropdown {
   padding-top: 31px;
   padding-bottom: 46px;
   background-color: var(--special-yellow);
-  display: grid;
   grid-template-columns: 179px 125px min-content;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 16px;
@@ -454,6 +454,7 @@ ul.service-nav-dropdown {
 
 .catalog-dropdown-icon {
   position: relative;
+  display: block; /*чтобы можно было добавить высоту элементу*/
 }
 
 .catalog-dropdown-icon::after {
@@ -466,6 +467,13 @@ ul.service-nav-dropdown {
   background-image: url(../img/icons/plus.svg);
   background-position: center;
 }
+
+/*
+.catalog-dropdown-icon:hover + .service-nav-dropdown,
+.catalog-dropdown-icon:focus + .service-nav-dropdown {
+  display: grid;
+}
+*/
 
 /* Info and contacts layout */
 
