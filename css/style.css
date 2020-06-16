@@ -139,6 +139,7 @@ html {
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 8px;
+  padding-bottom: 167px;
 }
 
 .header-navigation ul {
@@ -161,10 +162,6 @@ ul.header-user-nav {
   align-items: baseline;
   margin: 0;
   margin-bottom: 48px;
-}
-
-.header-user-nav * {
-  box-sizing: border-box;
 }
 
 .user-nav-search {
@@ -248,12 +245,11 @@ ul.header-user-nav {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 164px;
 }
 
 .service-nav-catalog {
-  /* margin-right: auto; */
-  margin-right: 349px;
+  margin-right: auto;
+  /* margin-right: 349px; */
 }
 
 .service-nav-delivery {
@@ -261,11 +257,15 @@ ul.header-user-nav {
 }
 
 .service-nav-garantee {
-  margin-right: 102px;
+  margin-right: 104px;
 }
 
 .service-nav-contacts {
   margin-right: 0;
+}
+
+.service-nav-catalog svg {
+  margin-left: 12px;
 }
 
 /* Header*/
@@ -279,12 +279,12 @@ ul.header-user-nav {
   color: var(--basic-black);
 }
 
-a.header-logo:hover,
-a.header-logo:focus {
+a.header-logo[href]:hover,
+a.header-logo[href]:focus {
   opacity: 0.6;
 }
 
-a.header-logo:active {
+a.header-logo[href]:active {
   opacity: 0.3;
 }
 
@@ -415,6 +415,13 @@ a.header-logo:active {
   opacity: 0.3;
 }
 
+.catalog-dropdown-icon:hover path,
+.catalog-dropdown-icon:focus path,
+.catalog-dropdown-icon:active path {
+  fill-opacity: 0.3;
+}
+
+
 /* Header catalog dropdown */
 
 .service-nav-catalog {
@@ -422,15 +429,15 @@ a.header-logo:active {
 }
 
 ul.service-nav-dropdown {
-  /* display: none; */
-  display: grid;
+  display: none;
+  /* display: grid; */
   width: 1160px;
   box-sizing: border-box;
   position: absolute;
   left: -60px;
   padding-left: 60px;
-  padding-top: 31px;
-  padding-bottom: 46px;
+  padding-top: 33px;
+  padding-bottom: 43px;
   background-color: var(--special-yellow);
   grid-template-columns: 179px 125px min-content;
   grid-template-rows: 1fr 1fr 1fr;
@@ -466,28 +473,12 @@ ul.service-nav-dropdown {
   grid-area: quad;
 }
 
-.catalog-dropdown-icon {
-  position: relative;
-  display: block; /*чтобы можно было добавить высоту элементу*/
-}
 
-.catalog-dropdown-icon::after {
-  content: "";
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 3px;
-  right: -35px;
-  background-image: url(../img/icons/plus.svg);
-  background-position: center;
-}
-
-/*
 .catalog-dropdown-icon:hover + .service-nav-dropdown,
 .catalog-dropdown-icon:focus + .service-nav-dropdown {
   display: grid;
 }
-*/
+
 
 /* Info and contacts layout */
 
@@ -788,12 +779,12 @@ ul.service-nav-dropdown {
   fill: var(--special-yellow);
 }
 
-a.footer-logo:hover svg,
-a.logo-footer:focus svg {
+a.footer-logo[href]:hover svg,
+a.logo-footer[href]:focus svg {
   opacity: 0.6;
 }
 
-a.footer-logo:active svg {
+a.footer-logo[href]:active svg {
   opacity: 0.3;
 }
 
@@ -1076,7 +1067,7 @@ a.footer-logo:active svg {
   opacity: 0.3;
   outline: none;
 }
-
+/*
 .modal-close:hover::before,
 .modal-close:focus::before,
 .modal-close:active::before {
@@ -1088,16 +1079,17 @@ a.footer-logo:active svg {
 .modal-close:active::after {
   transform: none;
 }
+*/
 
 /* Map */
 
 .modal-map {
-  width: 994px;
-  height: 593px;
+  width: 640px;
+  height: 480px;
   top: 50%;
   left: 50%;
-  margin-top: -296px;
-  margin-left: -497px;
+  margin-top: -240px;
+  margin-left: -320px;
 }
 
 .modal-map iframe {
