@@ -163,17 +163,31 @@ ul.header-user-nav {
   margin-bottom: 48px;
 }
 
+.header-user-nav * {
+  box-sizing: border-box;
+}
+
 .user-nav-search {
   width: 300px;
   margin-right: auto;
 }
 
 .header-user-nav .user-nav-log-in {
-  margin-right: 240px;
+  margin-right: 216px;
+  padding-left: 22px;
 }
 
 .header-user-nav .user-nav-compare {
-  margin-right: 65px;
+  margin-right: 43px;
+  padding-left: 24px;
+}
+
+.header-user-nav .user-nav-cart {
+  padding-left: 22px;
+}
+
+.header-user-nav .user-nav-profile {
+  padding-left: 22px;
 }
 
 .header-user-nav li {
@@ -186,7 +200,7 @@ ul.header-user-nav {
   height: 14px;
   position: absolute;
   top: 6px;
-  left: -22px;
+  left: 0;
   background-image: url("../img/icons/user-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -198,7 +212,7 @@ ul.header-user-nav {
   height: 14px;
   position: absolute;
   top: 6px;
-  left: -24px;
+  left: 0;
   background-image: url("../img/icons/compare.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -210,7 +224,7 @@ ul.header-user-nav {
   height: 10px;
   position: absolute;
   top: 5px;
-  left: -22px;
+  left: 0;
   background-image: url("../img/icons/shopping-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -222,7 +236,7 @@ ul.header-user-nav {
   height: 14px;
   position: absolute;
   top: 6px;
-  left: -22px;
+  left: 0;
   background-image: url("../img/icons/user-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1099,11 +1113,6 @@ a.footer-logo:active svg {
 }
 
 .inner-page .user-nav-log-out {
-  margin-right: 5px;
-  width: 130px;
-}
-
-.inner-page .user-nav-compare {
   margin-right: 65px;
 }
 
