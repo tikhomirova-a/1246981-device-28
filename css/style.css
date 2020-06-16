@@ -547,9 +547,7 @@ ul.service-nav-dropdown {
 }
 
 .info-contacts a.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-flex;
 }
 
 
@@ -585,15 +583,14 @@ ul.service-nav-dropdown {
   position: relative;
   text-align: center;
   vertical-align: middle;
-  /* display: inline-block; */
-  /* min-height: 40px; */
-  max-height: max-content;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .button::before {
@@ -601,7 +598,8 @@ ul.service-nav-dropdown {
   width: 100%;
   height: 8px;
   position: absolute;
-  top: 17px;
+  /* top: 17px; */
+  top: 40%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -626,7 +624,8 @@ ul.service-nav-dropdown {
 }
 
 .info-contacts .button {
-  width: 260px;
+  box-sizing: border-box;
+  min-width: 260px;
 }
 
 .info-contacts a {
@@ -975,6 +974,7 @@ a.footer-logo:active svg {
 .contact-form input {
   height: 50px;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #f2f2f2;
 }
 
@@ -997,9 +997,8 @@ a.footer-logo:active svg {
 
 .contact-form textarea {
   background-color: #f2f2f2;
-  padding-top: 16px;
   height: 167px;
-  padding-left: 20px;
+  padding: 16px 20px;
   margin-bottom: 12px;
 }
 
@@ -1008,8 +1007,7 @@ a.footer-logo:active svg {
 }
 
 .contact-form .button {
-  width: 200px;
-  /* padding: 0; */
+  min-width: 200px;
 }
 
 .contact-form .button::before {
@@ -1175,7 +1173,7 @@ a.footer-logo:active svg {
 }
 
 .filters .button {
-  width: 200px;
+  min-width: 200px;
   margin-top: 6px;
 }
 
@@ -1470,12 +1468,9 @@ a.footer-logo:active svg {
 .catalog-cart-button {
   display: none;
   position: absolute;
-  width: 200px;
+  min-width: 200px;
   top: 43%;
-  /* right: 0; */
-  /* bottom: 0; */
   left: 22%;
-  /* margin: auto; */
 }
 
 .catalog-compare-button {
@@ -1512,13 +1507,13 @@ a.footer-logo:active svg {
 
 
 .catalog-item-image:hover .catalog-compare-button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
 .catalog-item-image:hover .catalog-cart-button {
-  display: inline;
+  display: inline-flex;
 }
 
 .catalog-item-image:hover img {
