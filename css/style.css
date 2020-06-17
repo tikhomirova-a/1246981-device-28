@@ -142,9 +142,9 @@ html {
   padding-bottom: 167px;
 }
 
-.header-navigation ul {
-  padding: 0;
-}
+/* .header-navigation ul { */
+  /* padding: 0; */
+/* } */
 
 .header-logo {
   display: block;
@@ -328,6 +328,7 @@ a.header-logo[href]:active {
   left: 1px;
   width: 16px;
   height: 16px;
+
   background-image: url("../img/icons/search.svg");
   background-repeat: no-repeat;
   cursor: pointer;
@@ -335,11 +336,13 @@ a.header-logo[href]:active {
 
 .search-form:focus-within::before {
   content: "";
-  width: 100%;
-  height: 0;
   position: absolute;
   top: 30px;
   left: 0;
+
+  width: 100%;
+  height: 0;
+
   border-bottom: 2px solid var(--basic-black);
 }
 
@@ -370,6 +373,16 @@ a.header-logo[href]:active {
 
 .search-form:focus-within button {
   display: flex;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.search-form button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .header-user-nav a:hover,
@@ -428,55 +441,47 @@ a.header-logo[href]:active {
   position: relative;
 }
 
-ul.service-nav-dropdown {
+.service-nav-dropdown {
+  position: absolute;
+  top: 43px;
+  left: -60px;
+
   display: none;
-  /* display: grid; */
+  flex-wrap: wrap;
   width: 1160px;
   box-sizing: border-box;
-  position: absolute;
-  left: -60px;
+  padding-top: 12px;
+  padding-bottom: 41px;
   padding-left: 60px;
-  padding-top: 33px;
-  padding-bottom: 43px;
+
   background-color: var(--special-yellow);
-  grid-template-columns: 179px 125px min-content;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-row-gap: 16px;
-  grid-column-gap: 61px;
-  grid-template-areas:
-    "vr fitness quad"
-    "monopods watch ."
-    "action . .";
 }
 
-.service-nav-dropdown li:first-child {
-  grid-area: vr;
+.service-nav-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  margin-right: 61px;
 }
 
-.service-nav-dropdown li:nth-child(2) {
-  grid-area: monopods;
+.service-nav-dropdown li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
-.service-nav-dropdown li:nth-child(3) {
-  grid-area: action;
+.service-nav-dropdown .visual-devices {
+  min-width: 180px;
 }
 
-.service-nav-dropdown li:nth-child(4) {
-  grid-area: fitness;
+.service-nav-dropdown .smart-devices {
+  min-width: 125px;
 }
 
-.service-nav-dropdown li:nth-child(5) {
-  grid-area: watch;
+.service-nav-dropdown .flying-devices {
+  min-width: min-content;
 }
-
-.service-nav-dropdown li:nth-child(6) {
-  grid-area: quad;
-}
-
 
 .catalog-dropdown-icon:hover + .service-nav-dropdown,
 .catalog-dropdown-icon:focus + .service-nav-dropdown {
-  display: grid;
+  display: flex;
 }
 
 
@@ -653,6 +658,7 @@ ul.service-nav-dropdown {
   top: 32px;
   left: 0;
   background-color: var(--basic-black);
+  z-index: -1; /*чтобы не просвечивало сквозь выпадающий из хедера список, при его увеличении*/
 }
 
 /* Footer layout*/
