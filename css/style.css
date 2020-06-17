@@ -777,7 +777,7 @@ a.header-logo[href]:active {
   flex-wrap: wrap;
   width: 200px;
   margin: 0 auto;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .social-buttons li:not(:last-child) {
