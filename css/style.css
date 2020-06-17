@@ -1166,7 +1166,7 @@ a.footer-logo[href]:active svg {
 }
 
 .breadcrumbs li:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .catalog-page h1 {
@@ -1181,7 +1181,6 @@ a.footer-logo[href]:active svg {
   font-size: 47px;
   line-height: 58px;
 }
-
 
 .breadcrumbs a {
   font-size: 14px;
@@ -1198,6 +1197,38 @@ a.footer-logo[href]:active svg {
 
 .breadcrumbs a[href]:active {
   opacity: 0.1;
+}
+
+.breadcrumbs li:not(:last-child) {
+  position: relative;
+
+  padding-right: 20px;
+}
+
+.breadcrumbs li:first-child::after {
+  position: absolute;
+  top: 13px;
+  right: 0;
+
+  content: "";
+  width: 4px;
+  height: 7px;
+
+  background-image: url(../img/icons/arrow-nav.svg);
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs li:nth-child(2)::after {
+  position: absolute;
+  top: 13px;
+  right: -4px;
+
+  content: "";
+  width: 4px;
+  height: 7px;
+
+  background-image: url(../img/icons/arrow-nav.svg);
+  background-repeat: no-repeat;
 }
 
 /* Filters and catalog layout*/
