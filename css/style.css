@@ -775,13 +775,17 @@ a.header-logo[href]:active {
 .social-buttons {
   display: flex;
   flex-wrap: wrap;
-  width: 200px;
-  margin: 0 auto;
-  /* justify-content: center; */
+  max-width: 136px;
+  margin-left: 145px;
 }
 
-.social-buttons li:not(:last-child) {
+.social-buttons li:not(:nth-child(3n+3)) {
   margin-right: 20px;
+}
+
+/* При добавлении новой иконки, у нее будет отступ сверху */
+.social-buttons li:nth-child(n+4) {
+  margin-top: 10px;
 }
 
 .section-socials::before {
