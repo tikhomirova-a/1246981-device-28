@@ -463,7 +463,7 @@ a.header-logo[href]:active {
   margin-right: 61px;
 }
 
-.service-nav-dropdown li:not(:last-child) {
+.service-nav-dropdown ul li:not(:last-child) {
   margin-bottom: 16px;
 }
 
