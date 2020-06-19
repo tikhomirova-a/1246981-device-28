@@ -143,8 +143,7 @@ html {
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 8px;
-  /* padding-bottom: 167px; */
-  padding-bottom: 51px;
+  padding-bottom: 165px;
 }
 
 .header-logo {
@@ -503,9 +502,96 @@ a.header-logo[href]:active {
 
 /* Slider */
 
-/* Slide 1 */
-.slide-1 {
+.slider {
+  /* padding-left: 60px; */
+  padding-right: 60px;
 }
+
+.slider a {
+  color: var(--basic-black);
+}
+
+.slider-wrapper {
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.slider-wrapper-1 {
+  background-image: url(../img/three-selfie-sticks.png);
+  background-position: 90px 17px;
+}
+
+.slider-wrapper-2 {
+  background-image: url(../img/fitness-watch.png);
+}
+
+.slider-wrapper-3 {
+  background-image: url(../img/quadcopter.png);
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  /* min-height: 490px; */
+
+  /* background-image: url(../img/three-selfie-sticks.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 90px 17px; */
+}
+
+.slide-description {
+  grid-column: 2/3;
+  padding-top: 110px;
+  width: 500px;
+}
+
+.slide-description h2 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  color: var(--basic-black);
+
+  background-color: transparent;
+}
+
+.slide-description p {
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  line-height: 20px;
+
+  background-color: var(--basic-white);
+}
+
+.slide-description th {
+  font-family: "Gilroy", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+}
+
+.slide-description td {
+  font-family: "Gilroy", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+}
+
 
 /* Info and contacts layout */
 
@@ -682,7 +768,6 @@ a.header-logo[href]:active {
   position: absolute;
   top: 32px;
   left: 0;
-  z-index: -1; /*чтобы не просвечивало сквозь выпадающий из хедера список, при его увеличении*/
 
   content: "";
   width: 80px;
@@ -1127,6 +1212,10 @@ a.footer-logo[href]:active svg {
 /* Catalog page */
 
 /* Header */
+
+.inner-page .header-navigation {
+  padding-bottom: 51px;
+}
 
 .inner-page .user-nav-profile {
   margin-right: 20px;
