@@ -89,21 +89,27 @@
             </div>
             <div class="sorting">
               <h3>Сортировка:</h3>
-              <ul class="reset-list">
-                <li><button class="sorting-type sorting-type-current" type="button">По цене</button></li>
-                <li><button class="sorting-type" type="button">По типу</button></li>
-                <li><button class="sorting-type" type="button">По популярности</button></li>
+              <ul class="sorting-types reset-list">
+                <li><a class="sorting-type sorting-type-current">По цене</a></li>
+                <li><a href="#" class="sorting-type">По типу</a></li>
+                <li><a href="#" class="sorting-type">По популярности</a></li>
               </ul>
-              <button class="sorting-dir" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 0L0 10h11z" />
-                </svg>
-              </button>
-              <button class="sorting-dir sorting-dir-current" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 10L0 0h11" />
-                </svg>
-              </button>
+              <ul class="sorting-ways reset-list">
+                <li>
+                  <a href="#" class="sorting-way" aria-label="Сортировка по убыванию">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path fill="#231F20" d="M5.5 0L0 10h11z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="sorting-way sorting-way-current" aria-label="Сортировка по возрастанию">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path fill="#231F20" d="M5.5 10L0 0h11" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -121,22 +127,24 @@
                       <div class="scale">
                         <div class="bar"></div>
                       </div>
-                      <div class="toggle toggle-min" tabindex="0"></div>
-                      <div class="toggle toggle-max" tabindex="0"></div>
-                    </div>
-                    <div class="price-controls">
-                      <label class="min-price">
-                        от <input type="number" name="min-price" value="0" step="100">
-                      </label>
-                      <label class="max-price">
-                        до <input type="number" name="max-price" value="5000" step="100">
-                      </label>
+                      <div class="toggle toggle-min" tabindex="0">
+                        <label class="min-price">
+                          <span>от</span>
+                          <input type="number" name="min-price" value="0" step="100" min="0">
+                        </label>
+                      </div>
+                      <div class="toggle toggle-max" tabindex="0">
+                        <label class="max-price">
+                          <span>до</span>
+                          <input type="number" name="max-price" value="5000" step="100" min="0">
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </fieldset>
                 <fieldset class="filters-group reset-fieldset">
                   <legend>Цвет</legend>
-                  <ul class="reset-list">
+                  <ul class="check-list reset-list">
                     <li>
                       <input class="check__input" id="black" type="checkbox" name="black" checked>
                       <label class="check option" for="black">Чёрный</label>
@@ -161,7 +169,7 @@
                 </fieldset>
                 <fieldset class="filters-group reset-fieldset">
                   <legend>Bluetooth</legend>
-                  <ul class="reset-list">
+                  <ul class=" radio-list reset-list">
                     <li>
                       <input class="radio__input" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
                       <label class="radio option" for="bluetooth-yes">Есть</label>
@@ -225,17 +233,17 @@
               </ul>
               <ul class="pagination reset-list">
                 <li class="pagination-item">
-                  <a class="pagination-dir" href="#">Назад</a>
+                  <a class="pagination-direction" href="#">Назад</a>
                 </li>
                 <li class="pagination-item">
                   <ul class="reset-list">
-                    <li><a class="pagination-number pagination-number-current" href="#">1</a></li>
+                    <li><a class="pagination-number pagination-number-current">1</a></li>
                     <li><a class="pagination-number" href="#">2</a></li>
                     <li><a class="pagination-number" href="#">3</a></li>
                   </ul>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-dir" href="#">Вперед</a>
+                  <a class="pagination-direction" href="#">Вперед</a>
                 </li>
               </ul>
             </section>
