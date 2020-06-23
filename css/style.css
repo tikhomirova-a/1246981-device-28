@@ -71,14 +71,6 @@ img {
   height: auto;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -1399,11 +1391,27 @@ a.footer-logo[href]:active svg {
   position: fixed;
   z-index: 2;
 
+  display: none;
   box-sizing: border-box;
 
   background-color: var(--basic-white);
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
+
+.modal-show {
+  display: block;
+  animation-name: slide;
+  animation-duration: 0.5s;
+}
+
+.modal-invalid {
+  background-color: pink;
+}
+
+.modal-invalid input:invalid {
+  background-color: var(--special-pink);
+}
+
 
 /* Contact form  */
 
@@ -1499,10 +1507,6 @@ a.footer-logo[href]:active svg {
   background-color: transparent;
 }
 
-/* .contact-form input:focus:invalid {
-  background-color: var(--special-pink);
-} */
-
 .contact-form textarea {
   height: 167px;
   padding: 16px 20px;
@@ -1588,6 +1592,30 @@ a.footer-logo[href]:active svg {
   transform: none;
 }
 */
+
+/* Animations */
+
+@keyframes slide {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    transform: translateX(20px);
+  }
+
+  70% {
+    transform: translateX(-10px);
+  }
+
+  90% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
 
 /* Map */
 
