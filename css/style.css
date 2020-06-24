@@ -510,6 +510,8 @@ a.header-logo[href]:active {
   position: relative;
   z-index: 1; /*чтобы перекрывало фон шапки, но был ниже заголовка слайда*/
 
+  min-height: 534px;
+
   background-color: transparent;
   background-repeat: no-repeat;
 }
@@ -597,7 +599,7 @@ a.header-logo[href]:active {
 
 .slide-description {
   position: relative;
-  z-index: 2; /* чтобы заголовок перекрывал цифры на фоне*/
+  z-index: 2; /* перекрывает цифры на фоне*/
 
   grid-column: 2/3;
   padding-top: 110px;
@@ -639,8 +641,36 @@ a.header-logo[href]:active {
   background-color: var(--basic-white);
 }
 
-.slide-description .characteristic-list li:last-child {
-  padding-top: 15px;
+
+.slide-description .button {
+  min-width: 180px;
+}
+
+.characteristic-table {
+  margin-top: 50px;
+
+  border-spacing: 0;
+}
+
+.characteristic-table td {
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 13px;
+  padding-left: 1px;
+
+  font-family: "Gilroy", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+}
+
+.characteristic-table th {
+  padding: 1px;
 
   font-family: "Gilroy", "Verdana", sans-serif;
   font-style: normal;
@@ -653,45 +683,21 @@ a.header-logo[href]:active {
   background-color: var(--basic-white);
 }
 
-.slide-description .characteristic-list li:first-child {
-  font-family: "Gilroy", "Verdana", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 0.1em;
-  color: var(--basic-black);
-
-  background-color: var(--basic-white);
-}
-
-.slide-description .button {
-  min-width: 180px;
-}
-
-.characteristic {
-  margin-top: 50px;
-  display: flex;
+.slide-1-table {
   min-width: 444px;
-  box-sizing: border-box;
 }
 
-.characteristic ul {
-  display: flex;
-  flex-direction: column;
+.slide-1-table td:not(:last-child) {
+  padding-right: 60px;
 }
 
-.characteristic ul:not(:last-child) {
-  margin-right: 62px;
-}
-
-.slider-item:last-child .characteristic-list:first-child {
-  margin-right: 27px;
+.slide-3-table {
+  min-width: 325px;
 }
 
 .slider-controls {
   position: absolute;
-  bottom: 137px;
+  bottom: 165px;
   right: 28px;
 
   display: flex;
@@ -733,7 +739,7 @@ a.header-logo[href]:active {
 /* Popular */
 
 .popular {
-  margin-top: -30px;
+  margin-top: -58px;
   margin-bottom: 165px;
 }
 
@@ -800,17 +806,11 @@ a.header-logo[href]:active {
 /* Services */
 
 .services-slider-wrapper {
-  padding-bottom: 35px;
+  padding-bottom: 30px;
 
   background-color: var(--basic-grey-light);
 }
-/*
-.services-slider-wrapper-2 {
-  background-image: url(../img/icons/warranty.svg);
-  background-repeat: no-repeat;
-  background-position: 1100px 52px;
-}
-*/
+
 .services-slider h2 {
   margin: 0;
   padding: 0;
@@ -828,11 +828,11 @@ a.header-logo[href]:active {
 .services-slider p {
   letter-spacing: 0.1em;
 }
-
+/*
 .service-garantee p {
   line-height: 30px;
 }
-
+*/
 .services-slider {
   position: relative;
   top: -100px;
@@ -845,14 +845,10 @@ a.header-logo[href]:active {
 .services-slider-controls {
   position: relative;
 
-  padding-top: 80px;
+  padding-top: 78px;
 }
 
-.services-slider-controls li:first-child {
-  margin-bottom: 16px;
-}
-
-.services-slider-controls li:nth-child(2) {
+.services-slider-controls li {
   margin-bottom: 18px;
 }
 
@@ -913,6 +909,10 @@ a.header-logo[href]:active {
   display: none;
 }
 
+.services-item-content {
+  max-width: 590px;
+}
+
 .services-item-current {
   display: block;
 }
@@ -965,10 +965,15 @@ a.header-logo[href]:active {
 
 .ad-logos-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.ad-logos-list li:not(:last-child) {
+.ad-logos-list li {
   margin-right: 40px;
+}
+
+.ad-logos-list li:nth-child(4n+4) {
+  margin-right: 0;
 }
 
 .ad-logos-item img {
@@ -991,7 +996,7 @@ a.header-logo[href]:active {
   display: grid;
   grid-template-columns: 475px 560px;
   column-gap: 125px;
-  margin-bottom: 73px;
+  margin-bottom: 75px;
 }
 
 
@@ -1051,7 +1056,7 @@ a.header-logo[href]:active {
 
 .contacts a.button,
 .info a.button {
-  margin-top: 70px;
+  margin-top: 67px;
 }
 
 .info-contacts a.button {
@@ -1552,7 +1557,7 @@ a.footer-logo[href]:active svg {
 .modal-close::after {
   position: absolute;
   top: 27px;
-  right: 14px;
+  right: 15px;
 
   content: "";
   width: 25px;
