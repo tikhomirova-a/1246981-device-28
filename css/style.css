@@ -1409,14 +1409,10 @@ a.footer-logo[href]:active svg {
   animation-duration: 0.5s;
 }
 
-.modal-invalid {
-  background-color: pink;
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
-
-.modal-invalid input:invalid {
-  background-color: var(--special-pink);
-}
-
 
 /* Contact form  */
 
@@ -1538,6 +1534,35 @@ a.footer-logo[href]:active svg {
   background-color: var(--special-yellow-dark);
 }
 
+.contact-form input.input-error:focus {
+  background-color: var(--special-pink);
+}
+
+.contact-form textarea.input-error:focus {
+  background-color: var(--special-pink);
+}
+
+.contact-form p.input-error {
+  position: relative;
+}
+
+.contact-form p.input-error::after {
+  position: absolute;
+  right: 3%;
+  top: 85%;
+
+  content: "Заполните это поле.";
+  max-width: 260px;
+  padding: 5px 10px;
+
+  opacity: 0;
+  border: 1px solid var(--special-yellow);
+  background-color: var(--basic-white);
+
+  animation-name: errorMessage;
+  animation-duration: 3s;
+}
+
 .modal-close {
   position: absolute;
   top: 17px;
@@ -1619,6 +1644,42 @@ a.footer-logo[href]:active svg {
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes errorMessage {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -2416,12 +2477,12 @@ a.footer-logo[href]:active svg {
   color: var(--basic-black);
 }
 
-.pagination-direction:hover,
-.pagination-direction:focus {
+.pagination-direction[href]:hover,
+.pagination-direction[href]:focus {
   background-color: #d9d9d9;
 }
 
-.pagination-direction:active {
+.pagination-direction[href]:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d9d9d9;
 }

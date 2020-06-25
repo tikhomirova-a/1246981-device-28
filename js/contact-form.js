@@ -5,6 +5,8 @@ var contactForm = contactPopup.querySelector(".contact-form");
 var contactName = contactPopup.querySelector("[name=name]");
 var contactEmail = contactPopup.querySelector("[name=email]");
 var contactText = contactPopup.querySelector("[name=text]");
+var formField = contactPopup.querySelectorAll("p");
+var inputField = contactPopup.querySelectorAll(".input-field");
 
 var isStorageSupport = true;
 var storageName = "";
@@ -33,21 +35,48 @@ contactLink.addEventListener("click", function (evt) {
 contactClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   contactPopup.classList.remove("modal-show");
-  contactPopup.classList.remove("modal-invalid");
+  contactPopup.classList.remove("modal-error");
+  formField.forEach (element => element.classList.remove("input-error"));
+  inputField.forEach (element => element.classList.remove("input-error"));
 });
 
 contactForm.addEventListener("submit", function (evt) {
-  if (!contactName.value || !contactEmail.value || !contactText.value) {
+  if (!contactName.value) {
     evt.preventDefault();
-    contactPopup.classList.remove("modal-invalid");
+    contactPopup.classList.remove("modal-error");
+    contactName.classList.remove("input-error");
+    formField[0].classList.remove("input-error");
     contactPopup.offsetWidth = contactPopup.offsetWidth;
-    contactPopup.classList.add("modal-invalid");
+    contactName.classList.add("input-error");
+    contactName.focus();
+    formField[0].classList.add("input-error");
+    contactPopup.classList.add("modal-error");
+  } else if (!contactEmail.value) {
+    evt.preventDefault();
+    contactPopup.classList.remove("modal-error");
+    contactEmail.classList.remove("input-error");
+    formField[1].classList.remove("input-error");
+    contactPopup.offsetWidth = contactPopup.offsetWidth;
+    contactEmail.classList.add("input-error");
+    contactEmail.focus();
+    formField[1].classList.add("input-error");
+    contactPopup.classList.add("modal-error");
+  } else if (!contactText.value) {
+    evt.preventDefault();
+    contactPopup.classList.remove("modal-error");
+    contactText.classList.remove("input-error");
+    formField[2].classList.remove("input-error");
+    contactPopup.offsetWidth = contactPopup.offsetWidth;
+    contactText.classList.add("input-error");
+    contactText.focus();
+    formField[2].classList.add("input-error");
+    contactPopup.classList.add("modal-error");
   } else {
-    if (isStorageSupport) {
-      localStorage.setItem("name", contactName.value);
-      localStorage.setItem("email", contactEmail.value);
-    }
-  }
+        if (isStorageSupport) {
+          localStorage.setItem("name", contactName.value);
+          localStorage.setItem("email", contactEmail.value);
+        }
+      }
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -55,7 +84,9 @@ window.addEventListener("keydown", function (evt) {
     if (contactPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       contactPopup.classList.remove("modal-show");
-      contactPopup.classList.remove("modal-invalid");
+      contactPopup.classList.remove("modal-error");
+      formField.forEach (element => element.classList.remove("input-error"));
+      inputField.forEach (element => element.classList.remove("input-error"));
     }
   }
 });
