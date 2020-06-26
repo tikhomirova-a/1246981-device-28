@@ -409,11 +409,11 @@ a.header-logo[href]:active {
   letter-spacing: 0.2em;
 }
 
-.header-service-nav li:first-child {
+.header-service-nav > li:first-child {
   letter-spacing: 0.1em;
 }
 
-.header-service-nav .service-nav-dropdown li {
+.service-nav-dropdown li {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
@@ -453,7 +453,7 @@ a.header-logo[href]:active {
 .service-nav-dropdown {
   position: absolute;
   left: -60px;
-  z-index: 3; /*чтобы было выше слайдера*/
+  z-index: 3; /* выше слайдера */
 
   display: none;
   flex-wrap: wrap;
@@ -472,7 +472,7 @@ a.header-logo[href]:active {
   margin-right: 61px;
 }
 
-.service-nav-dropdown ul li:not(:last-child) {
+.dropdown-list li:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -508,7 +508,7 @@ a.header-logo[href]:active {
 
 .slider-wrapper {
   position: relative;
-  z-index: 1; /*чтобы перекрывало фон шапки, но был ниже заголовка слайда*/
+  z-index: 1; /*перекрывает фон шапки, но ниже заголовка слайда*/
 
   min-height: 534px;
 
@@ -1248,11 +1248,11 @@ a.header-logo[href]:active {
   margin-right: 44px;
 }
 
-.footer-user-nav li span {
+.footer-user-nav-item span {
   margin-left: 11px;
 }
 
-.inner-page .footer-user-nav li {
+.inner-page .footer-user-nav-item {
   margin-right: 43px;
 }
 
@@ -1304,11 +1304,11 @@ a.header-logo[href]:active {
   fill: var(--special-yellow-dark);
 }
 
-.footer-user-nav svg path {
+.footer-nav-link path {
   fill: #ffc600;
 }
 
-.footer-user-nav-profile svg path {
+.footer-nav-link-profile path {
   fill: var(--special-yellow);
 }
 
@@ -1942,7 +1942,6 @@ a.footer-logo[href]:active svg {
 .catalog-item a:hover,
 .catalog-item a:focus {
   opacity: 0.6;
-  /* outline: none; */
 }
 
 .catalog-item a:active {
@@ -2071,7 +2070,8 @@ a.footer-logo[href]:active svg {
   line-height: 19px;
 }
 
-.filters-group input[disabled] + label {
+.check__input[disabled] + label,
+.radio__input[disabled] + label {
   color: #A6A6A6;
 }
 
