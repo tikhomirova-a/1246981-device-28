@@ -109,6 +109,7 @@ html {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -302,12 +303,36 @@ a.header-logo[href]:active {
   background-color: transparent;
 }
 
+.search-form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .search-form input::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.search-form input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:hover::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .search-form input:hover::placeholder {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:focus::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.search-form input:focus::-moz-placeholder {
+  color: var(--basic-black);
 }
 
 .search-form input:focus::placeholder {
@@ -485,6 +510,8 @@ a.header-logo[href]:active {
 }
 
 .service-nav-dropdown .flying-devices {
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
   min-width: min-content;
 }
 
@@ -811,6 +838,8 @@ a.header-logo[href]:active {
 }
 
 .popular-monopode p {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 
@@ -850,7 +879,8 @@ a.header-logo[href]:active {
 
   display: grid;
   grid-template-columns: 285px 1fr;
-  column-gap: 115px;
+  -moz-column-gap: 115px;
+       column-gap: 115px;
 }
 
 .services-slider-controls {
@@ -994,7 +1024,8 @@ a.header-logo[href]:active {
 }
 
 .ad-logos-item img:hover {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
   opacity: 1;
 }
 
@@ -1006,7 +1037,8 @@ a.header-logo[href]:active {
 .info-contacts {
   display: grid;
   grid-template-columns: 475px 560px;
-  column-gap: 125px;
+  -moz-column-gap: 125px;
+       column-gap: 125px;
   margin-bottom: 75px;
 }
 
@@ -1187,6 +1219,7 @@ a.header-logo[href]:active {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content;
   padding-top: 47px;
   padding-bottom: 65px;
@@ -1416,13 +1449,17 @@ a.footer-logo[href]:active svg {
 
 .modal-show {
   display: block;
-  animation-name: slide;
-  animation-duration: 0.5s;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0.6s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 /* Contact form  */
@@ -1570,8 +1607,11 @@ a.footer-logo[href]:active svg {
   border: 1px solid var(--special-yellow);
   background-color: var(--basic-white);
 
-  animation-name: errorMessage;
-  animation-duration: 3s;
+  -webkit-animation-name: errorMessage;
+
+          animation-name: errorMessage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .modal-close {
@@ -1636,6 +1676,28 @@ a.footer-logo[href]:active svg {
 
 /* Animations */
 
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    transform: translateX(20px);
+  }
+
+  70% {
+    transform: translateX(-10px);
+  }
+
+  90% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translateX(-2000px);
@@ -1658,6 +1720,20 @@ a.footer-logo[href]:active svg {
   }
 }
 
+@-webkit-keyframes errorMessage {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes errorMessage {
   0% {
     opacity: 1;
@@ -1669,6 +1745,28 @@ a.footer-logo[href]:active svg {
 
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -1925,7 +2023,8 @@ a.footer-logo[href]:active svg {
 .catalog-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 48px;
   padding: 0;
   margin: 0;
@@ -2210,6 +2309,8 @@ a.footer-logo[href]:active svg {
 
 .option {
   display: block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   margin-bottom: 1px;
 }
