@@ -102,7 +102,7 @@ mapLink.addEventListener("click", function (evt) {
 });
 
 mapClose.addEventListener("click", function (evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   mapPopup.classList.remove("modal-show");
 });
 
@@ -115,3 +115,81 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+
+// First slider
+
+var slider = document.querySelector(".slider");
+var wrapper = slider.querySelector(".slider-wrapper");
+var slide = slider.querySelectorAll(".slide");
+var controls = slider.querySelectorAll("button");
+
+for (i=0; i < slide.length; i++) {
+  controls[i].addEventListener("click", runSlider.bind(i));
+}
+
+function runSlider(evt) {
+  evt.preventDefault();
+  slide.forEach(element => element.classList.remove("slide-current"));
+  controls.forEach(element => element.classList.remove("control-current"));
+  slide[this].classList.add("slide-current");
+  controls[this].classList.add("control-current");
+  wrapper.classList.remove("slider-wrapper-1");
+  wrapper.classList.remove("slider-wrapper-2");
+  wrapper.classList.remove("slider-wrapper-3");
+  wrapper.classList.add("slider-wrapper-"+(this+1));
+}
+
+// controls[0].addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slide.forEach(element => element.classList.remove("slide-current"));
+//   controls.forEach(element => element.classList.remove("control-current"));
+//   wrapper.classList.remove("slider-wrapper-2");
+//   wrapper.classList.remove("slider-wrapper-3");
+
+//   slide[0].classList.add("slide-current");
+//   controls[0].classList.add("control-current");
+//   wrapper.classList.add("slider-wrapper-1");
+// });
+
+// controls[1].addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slide.forEach(element => element.classList.remove("slide-current"));
+//   controls.forEach(element => element.classList.remove("control-current"));
+//   wrapper.classList.remove("slider-wrapper-1");
+//   wrapper.classList.remove("slider-wrapper-3");
+
+//   slide[1].classList.add("slide-current");
+//   controls[1].classList.add("control-current");
+//   wrapper.classList.add("slider-wrapper-2");
+// });
+
+// controls[2].addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slide.forEach(element => element.classList.remove("slide-current"));
+//   controls.forEach(element => element.classList.remove("control-current"));
+//   wrapper.classList.remove("slider-wrapper-1");
+//   wrapper.classList.remove("slider-wrapper-2");
+
+//   slide[2].classList.add("slide-current");
+//   controls[2].classList.add("control-current");
+//   wrapper.classList.add("slider-wrapper-3");
+// });
+
+
+// Services slider
+
+var serviceSlider = document.querySelector(".services-slider");
+var serviceButton = serviceSlider.querySelectorAll(".service-button");
+var serviceSlide = serviceSlider.querySelectorAll(".services-item");
+
+for (i=0; i < serviceSlide.length; i++) {
+  serviceButton[i].addEventListener("click", runServiceSlider.bind(i));
+}
+
+function runServiceSlider(evt) {
+  evt.preventDefault();
+  serviceSlide.forEach(element => element.classList.remove("services-item-current"));
+  serviceButton.forEach(element => element.classList.remove("service-button-current"));
+  serviceSlide[this].classList.add("services-item-current");
+  serviceButton[this].classList.add("service-button-current");
+}

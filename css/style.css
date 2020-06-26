@@ -707,6 +707,7 @@ a.header-logo[href]:active {
 
 .slider-controls button {
   position: relative;
+  z-index: 2;
 
   width: 12px;
   height: 12px;
@@ -717,6 +718,16 @@ a.header-logo[href]:active {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
+}
+
+.slider-controls button:focus,
+.slider-controls button:active {
+  outline: none;
+}
+
+.slider-controls button:focus {
+  /* outline: 2px solid var(--special-yellow-dark); */
+  box-shadow: 0 0 5px black;
 }
 
 .slider-controls .control-current::after {
@@ -1501,9 +1512,7 @@ a.footer-logo[href]:active svg {
 }
 
 .contact-form input:focus,
-.contact-form input:active,
-.contact-form textarea:focus,
-.contact-form textarea:active {
+.contact-form textarea:focus {
   outline: 2px solid var(--special-yellow);
   background-color: transparent;
 }
@@ -1536,10 +1545,12 @@ a.footer-logo[href]:active svg {
 
 .contact-form input.input-error:focus {
   background-color: var(--special-pink);
+  outline: none;
 }
 
 .contact-form textarea.input-error:focus {
   background-color: var(--special-pink);
+  outline: none;
 }
 
 .contact-form p.input-error {
