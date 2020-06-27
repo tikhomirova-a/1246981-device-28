@@ -484,8 +484,8 @@ a.header-logo[href]:active {
   flex-wrap: wrap;
   width: 1160px;
   box-sizing: border-box;
-  padding-top: 34px;
-  padding-bottom: 41px;
+  padding-top: 30px;
+  padding-bottom: 43px;
   padding-left: 60px;
 
   background-color: var(--special-yellow);
@@ -753,7 +753,6 @@ a.header-logo[href]:active {
 }
 
 .slider-controls button:focus {
-  /* outline: 2px solid var(--special-yellow-dark); */
   box-shadow: 0 0 5px black;
 }
 
@@ -868,11 +867,7 @@ a.header-logo[href]:active {
 .services-slider p {
   letter-spacing: 0.1em;
 }
-/*
-.service-garantee p {
-  line-height: 30px;
-}
-*/
+
 .services-slider {
   position: relative;
   top: -100px;
@@ -1660,19 +1655,6 @@ a.footer-logo[href]:active svg {
   opacity: 0.3;
   outline: none;
 }
-/*
-.modal-close:hover::before,
-.modal-close:focus::before,
-.modal-close:active::before {
-  transform: rotate(90deg);
-}
-
-.modal-close:hover::after,
-.modal-close:focus::after,
-.modal-close:active::after {
-  transform: none;
-}
-*/
 
 /* Animations */
 
@@ -2088,12 +2070,7 @@ a.footer-logo[href]:active svg {
   width: 11px;
   margin-right: 25px;
 }
-/*
-.sorting a[href]:focus,
-.sorting a[href]:active {
-  outline: none;
-}
-*/
+
 .sorting .sorting-type {
   font-size: 14px;
   line-height: 19px;
@@ -2282,6 +2259,16 @@ a.footer-logo[href]:active svg {
 
   border: none;
   background-color: transparent;
+}
+
+.toggle input::-webkit-outer-spin-button,
+.toggle input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.toggle input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .toggle span {

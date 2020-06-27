@@ -1,3 +1,5 @@
+// contact form
+
 var contactLink = document.querySelector(".contact-link");
 var contactPopup = document.querySelector(".modal-contact-form");
 var contactClose = contactPopup.querySelector(".modal-close");
@@ -91,6 +93,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+// map
 
 var mapLink = document.querySelector(".map-link");
 var mapPopup = document.querySelector(".modal-map");
@@ -138,43 +141,6 @@ function runSlider(evt) {
   wrapper.classList.remove("slider-wrapper-3");
   wrapper.classList.add("slider-wrapper-"+(this+1));
 }
-
-// controls[0].addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slide.forEach(element => element.classList.remove("slide-current"));
-//   controls.forEach(element => element.classList.remove("control-current"));
-//   wrapper.classList.remove("slider-wrapper-2");
-//   wrapper.classList.remove("slider-wrapper-3");
-
-//   slide[0].classList.add("slide-current");
-//   controls[0].classList.add("control-current");
-//   wrapper.classList.add("slider-wrapper-1");
-// });
-
-// controls[1].addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slide.forEach(element => element.classList.remove("slide-current"));
-//   controls.forEach(element => element.classList.remove("control-current"));
-//   wrapper.classList.remove("slider-wrapper-1");
-//   wrapper.classList.remove("slider-wrapper-3");
-
-//   slide[1].classList.add("slide-current");
-//   controls[1].classList.add("control-current");
-//   wrapper.classList.add("slider-wrapper-2");
-// });
-
-// controls[2].addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slide.forEach(element => element.classList.remove("slide-current"));
-//   controls.forEach(element => element.classList.remove("control-current"));
-//   wrapper.classList.remove("slider-wrapper-1");
-//   wrapper.classList.remove("slider-wrapper-2");
-
-//   slide[2].classList.add("slide-current");
-//   controls[2].classList.add("control-current");
-//   wrapper.classList.add("slider-wrapper-3");
-// });
-
 
 // Services slider
 
